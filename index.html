@@ -205,43 +205,43 @@ the approach.
        <div class="item">
         <img src="static/images/First.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          .
+          1. A Model-based Controller suggests actions, conditioned on the observation of the objects’ poses.
         </h2>
       </div>
        <div class="item">
         <img src="static/images/PF.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-         .
+         2. The Model-based controller is designed as a Potential Field consisting of two components: an Attractive one directing the plug towards the medial axis of the socket at every time step and a Repulsive one forcing it away from in-collision states that could prohibit insertion.
         </h2>
       </div>  
       <div class="item">
         <img src="static/images/Second.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-         .
+         3. Following, the actions suggested by the Potential Field are superimposed by those of a Residual RL module.
         </h2>
       </div>
        <div class="item">
         <img src="static/images/Res_Curric.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-         .
+         4. The Residual RL module is trained using a simultaneous observation noise and action scaling curriculum scheme. According to this scheme, during the first episodes of RL training, the maximum observation noise assumed is close to 0 and the Potential Field contributes exclusively to the total actions. As maximum observation noise increases, according to the insertion percentage of the previous episode, the actions of the RL module are also progressively weighed more heavily, up to the point of equal contribution with the Potential Field.
         </h2>
       </div>  
       <div class="item">
         <img src="static/images/Third.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-         .
+        5. The combined policy is trained in Simulation, using IsaacGym.
        </h2>
      </div>
       <div class="item">
         <img src="static/images/Learning_Diagram.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-         .
+         6. Under perfect observation assumptions, the Potential Fields achieve near-optimal performance. However, as the assumed maximum levels of observation noise increase, their insertion success rate degrades. So, the residual RL module is added to the architecture to learn to compensate for these uncertainties of the controller. As the deep RL module gets trained, high insertion percentages are again achieved.
         </h2>
       </div>   
      <div class="item">
       <img src="static/images/Fourth.png" alt="MY ALT TEXT"/>
       <h2 class="subtitle has-text-centered">
-        .
+      7. As a final step, the overall policy transfers zero-shot to a real robotic setup, with poses estimated by a visual tracker.
       </h2>
     </div>
   </div>
