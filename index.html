@@ -235,7 +235,11 @@ the approach.
       <div class="item">
         <img src="static/images/Learning_Diagram.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-         6. Under perfect observation assumptions, the Potential Fields achieve near-optimal performance. However, as the assumed maximum levels of observation noise increase, their insertion success rate degrades. So, the residual RL module is added to the architecture to learn to compensate for these uncertainties of the controller. As the deep RL module gets trained, high insertion percentages are again achieved.
+         6. Impact of observation noise on insertion trajectories: (left) Under 0 noise, both the model-
+based controller and the combined policy succeed. Residual RL helps to shorten trajectories. (cen-
+ter) Introducing low observation noise erodes the performance of the model-based controller, while
+RL preserves performance. (right) At high levels of noise, the model-based controller fails, while
+integrating the Residual RL policy effectively compensates for noise.
         </h2>
       </div>   
      <div class="item">
@@ -271,7 +275,7 @@ Real-world household objects not seen during training.
   <div class="container is-max-desktop">
     <div class="hero-body">
         <img src="static/images/Sim2Real.png" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">.
+      <h2 class="subtitle has-text-centered"> Plug insertion in simulation (top) and real world (bottom) for the same plug.
       </h2>
     </div>
   </div>
@@ -308,7 +312,7 @@ Real-world household objects not seen during training.
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">NIST Taskboard Challenge - inspired objects</h2>
+      <h2 class="title is-3">NIST Taskboard Challenge - inspired objects - Sim2Real Transfer</h2>
       <div class="columns is-multiline">
         <div class="column is-one-fourth">
           <img src = "static/videos/nvidia_12mm_round.gif" width="100%"/>
@@ -335,7 +339,7 @@ Real-world household objects not seen during training.
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Custom Objects (Hard case)</h2>
+      <h2 class="title is-3">Custom Objects - Sim2Real Transfer (Hard case)</h2>
       <div class="columns is-multiline">
         <div class="column is-one-fourth">
           <img src = "static/videos/cylinder.gif" width="100%"/>
@@ -361,7 +365,7 @@ Real-world household objects not seen during training.
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Real Objects</h2>
+      <h2 class="title is-3"> Real Objects (unseen during training) </h2>
       <div class="columns is-multiline">
         <div class="column is-one-fourth">
           <img src = "static/videos/2_prong.gif" width="100%"/>
