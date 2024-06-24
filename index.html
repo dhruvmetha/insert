@@ -203,47 +203,43 @@ the approach.
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
-        <img src="static/images/First.png" alt="MY ALT TEXT"/>
+        <img src="static/images/First.png" alt="MY ALT TEXT" style="width: 85%;"/>
         <h2 class="subtitle has-text-centered">
           1. A Model-based Controller suggests actions, conditioned on the observation of the objects’ poses.
         </h2>
       </div>
        <div class="item">
-        <img src="static/images/PF.png" alt="MY ALT TEXT"/>
+        <img src="static/images/PF.png" alt="MY ALT TEXT" style="width: 85%;"/>
         <h2 class="subtitle has-text-centered">
          2. The Model-based controller is designed as a Potential Field consisting of two components: an Attractive one directing the plug towards the medial axis of the socket at every time step and a Repulsive one forcing it away from in-collision states that could prohibit insertion.
         </h2>
       </div>  
       <div class="item">
-        <img src="static/images/Second.png" alt="MY ALT TEXT"/>
+        <img src="static/images/Second.png" alt="MY ALT TEXT" style="width: 85%;"/>
         <h2 class="subtitle has-text-centered">
          3. Following, the actions suggested by the Potential Field are superimposed by those of a Residual RL module.
         </h2>
       </div>
        <div class="item">
-        <img src="static/images/Res_Curric.png" alt="MY ALT TEXT"/>
+        <img src="static/images/Res_Curric.png" alt="MY ALT TEXT" style="width: 85%;"/>
         <h2 class="subtitle has-text-centered">
          4. The Residual RL module is trained using a simultaneous observation noise and action scaling curriculum scheme. According to this scheme, during the first episodes of RL training, the maximum observation noise assumed is close to 0 and the Potential Field contributes exclusively to the total actions. As maximum observation noise increases, according to the insertion percentage of the previous episode, the actions of the RL module are also progressively weighed more heavily, up to the point of equal contribution with the Potential Field.
         </h2>
       </div>  
       <div class="item">
-        <img src="static/images/Third.png" alt="MY ALT TEXT"/>
+        <img src="static/images/Third.png" alt="MY ALT TEXT" style="width: 85%;"/>
         <h2 class="subtitle has-text-centered">
         5. The combined policy is trained in Simulation, using IsaacGym.
        </h2>
      </div>
       <div class="item">
-        <img src="static/images/Learning_Diagram.png" alt="MY ALT TEXT"/>
+        <img src="static/images/Learning_Diagram.png" alt="MY ALT TEXT" style="width: 85%;"/>
         <h2 class="subtitle has-text-centered">
-         6. Impact of observation noise on insertion trajectories: (left) Under 0 noise, both the model-
-based controller and the combined policy succeed. Residual RL helps to shorten trajectories. (cen-
-ter) Introducing low observation noise erodes the performance of the model-based controller, while
-RL preserves performance. (right) At high levels of noise, the model-based controller fails, while
-integrating the Residual RL policy effectively compensates for noise.
+         6. Impact of observation noise on insertion trajectories: (left) Under 0 noise, both the model-based controller and the combined policy succeed. Residual RL helps to shorten trajectories. (center) Introducing low observation noise erodes the performance of the model-based controller, while RL preserves performance. (right) At high levels of noise, the model-based controller fails, while integrating the Residual RL policy effectively compensates for noise.
         </h2>
       </div>   
      <div class="item">
-      <img src="static/images/Fourth.png" alt="MY ALT TEXT"/>
+      <img src="static/images/Fourth.png" alt="MY ALT TEXT" style="width: 85%;"/>
       <h2 class="subtitle has-text-centered">
       7. As a final step, the overall policy transfers zero-shot to a real robotic setup, with poses estimated by a visual tracker.
       </h2>
@@ -254,6 +250,7 @@ integrating the Residual RL policy effectively compensates for noise.
 </section>  
 <!-- End image carousel -->
 
+  
 
 <!-- Teaser video-->
 <section class="hero teaser">
@@ -295,12 +292,27 @@ Real-world household objects not seen during training.
 </section>
 <!-- End teaser video -->
 
-**Ablation Study:** The proposed method is compared with alternative ways for combining the Model-based controller with the Residual RL module.
 
-- Item 1: Learning the scaling parameters w of the Potential Field components with the Residual RL module.
-- Item 2: Learning residual actions with the Residual RL module (set β=1).
-- Item 3: Learning both the residual actions and the weight β with the Residual RL module.
-  
+
+<!-- Ablation Study Section -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Ablation Study</h2>
+        <div class="content has-text-justified">
+          <ul>
+            <li><strong>Item 1:</strong> Learning the scaling parameters w of the Potential Field components with the Residual RL module.</li>
+            <li><strong>Item 2:</strong> Learning residual actions with the Residual RL module (set β=1).</li>
+            <li><strong>Item 3:</strong> Learning both the residual actions and the weight β with the Residual RL module.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Ablation Study Section -->
+
   
 <!-- Teaser video-->
 <section class="hero teaser">
