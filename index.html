@@ -203,43 +203,43 @@ the approach.
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item">
-          <img src="static/images/First.png" alt="MY ALT TEXT" style="width: 85%;"/>
+          <img src="static/images/First.png" alt="MY ALT TEXT" style="width: 99%;"/>
           <h2 class="subtitle has-text-centered">
             <strong>1.</strong> A Model-based Controller suggests actions, conditioned on the observation of the objects’ poses.
           </h2>
         </div>
         <div class="item">
-          <img src="static/images/PF.png" alt="MY ALT TEXT" style="width: 85%;"/>
+          <img src="static/images/PF.png" alt="MY ALT TEXT" style="width: 99%;"/>
           <h2 class="subtitle has-text-centered">
             <strong>2.</strong> The Model-based controller is designed as a Potential Field consisting of two components: an Attractive one directing the plug towards the medial axis of the socket at every time step and a Repulsive one forcing it away from in-collision states that could prohibit insertion.
           </h2>
         </div>  
         <div class="item">
-          <img src="static/images/Second.png" alt="MY ALT TEXT" style="width: 85%;"/>
+          <img src="static/images/Second.png" alt="MY ALT TEXT" style="width: 99%;"/>
           <h2 class="subtitle has-text-centered">
             <strong>3.</strong> Following, the actions suggested by the Potential Field are superimposed by those of a Residual RL module.
           </h2>
         </div>
         <div class="item">
-          <img src="static/images/Res_Curric.png" alt="MY ALT TEXT" style="width: 85%;"/>
+          <img src="static/images/Res_Curric.png" alt="MY ALT TEXT" style="width: 99%;"/>
           <h2 class="subtitle has-text-centered">
             <strong>4.</strong> The Residual RL module is trained using a simultaneous observation noise and action scaling curriculum scheme. According to this scheme, during the first episodes of RL training, the maximum observation noise assumed is close to 0 and the Potential Field contributes exclusively to the total actions. As maximum observation noise increases, according to the insertion percentage of the previous episode, the actions of the RL module are also progressively weighed more heavily, up to the point of equal contribution with the Potential Field.
           </h2>
         </div>  
         <div class="item">
-          <img src="static/images/Third.png" alt="MY ALT TEXT" style="width: 85%;"/>
+          <img src="static/images/Third.png" alt="MY ALT TEXT" style="width: 99%;"/>
           <h2 class="subtitle has-text-centered">
             <strong>5.</strong> The combined policy is trained in Simulation, using IsaacGym.
           </h2>
         </div>
         <div class="item">
-          <img src="static/images/Learning_Diagram.png" alt="MY ALT TEXT" style="width: 85%;"/>
+          <img src="static/images/Learning_Diagram.png" alt="MY ALT TEXT" style="width: 99%;"/>
           <h2 class="subtitle has-text-centered">
             <strong>6.</strong> Impact of observation noise on insertion trajectories: (left) Under 0 noise, both the model-based controller and the combined policy succeed. Residual RL helps to shorten trajectories. (center) Introducing low observation noise erodes the performance of the model-based controller, while RL preserves performance. (right) At high levels of noise, the model-based controller fails, while integrating the Residual RL policy effectively compensates for noise.
           </h2>
         </div>   
         <div class="item">
-          <img src="static/images/Fourth.png" alt="MY ALT TEXT" style="width: 85%;"/>
+          <img src="static/images/Fourth.png" alt="MY ALT TEXT" style="width: 99%;"/>
           <h2 class="subtitle has-text-centered">
             <strong>7.</strong> As a final step, the overall policy transfers zero-shot to a real robotic setup, with poses estimated by a visual tracker.
           </h2>
